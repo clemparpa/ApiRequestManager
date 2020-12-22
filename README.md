@@ -10,7 +10,7 @@ to call many apis easily
 https://clemparpa.github.io
 
 ## PyPi project page
-https://test.pypi.org/project/PyApiManager-clemparpa/0.4.1/
+https://test.pypi.org/project/PyApiManager-clemparpa/0.5.1/
 
 
 ## Demo
@@ -22,12 +22,12 @@ Create a Config Path Instance which contains configurations for your apis:
         Config(name="api_2_demo", base_url="http://api_2_demo_base")
     )
     
-Then Create a Request Class your apis
+Then Create Request Classes for your apis
 
     ApiDemo = RequestFactory(api_name="api_demo")
     Api2Demo = RequestFactory(api_name="api_2_demo")
     
-Finally you create and execute requests
+Finally instanciate and execute requests
 
     response = ApiDemo(end_url="clemparpa")
     response2 = Api2Demo(end_url="Zlatan")
