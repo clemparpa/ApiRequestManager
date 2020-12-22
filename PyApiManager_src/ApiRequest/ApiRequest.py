@@ -1,5 +1,4 @@
 import copy
-
 from PyApiManager.Config import Config
 from urllib.parse import urljoin
 import requests
