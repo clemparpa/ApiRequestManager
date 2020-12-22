@@ -1,4 +1,4 @@
-# PyApiManager
+# PyApiManager  [![Coverage Status](https://coveralls.io/repos/github/clemparpa/PyApiManager/badge.svg?branch=main)](https://coveralls.io/github/clemparpa/PyApiManager?branch=main)
  Communicate with Apis with flow
 
 
