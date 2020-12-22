@@ -1,9 +1,6 @@
 # PyApiManager
  Communicate with Apis with flow
 
-# PyApiManager
- Communicate with Apis with flow
-
 
 PyApiManager module provides ConfigPath object and RequestFactory to be able
 to call many apis easily
