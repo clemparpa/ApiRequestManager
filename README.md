@@ -10,7 +10,7 @@ to call many apis easily
 https://clemparpa.github.io
 
 ## PyPi project page
-https://test.pypi.org/project/PyApiManager-clemparpa/0.4.1/
+https://test.pypi.org/project/PyApiManager-clemparpa/0.5.1/
 
 
 ## Demo
