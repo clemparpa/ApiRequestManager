@@ -84,7 +84,6 @@ class RequestFactory:
 
 
     def __repr__(self):
-        # add comment for continous integration
         return "RequestFactory(%r)" % self._api_name
 
 
