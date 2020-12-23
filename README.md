@@ -44,11 +44,20 @@ if it's JSON format data, response.json() returns a dict which contains data
 
 ## Coverage
     ----------- coverage: platform win32, python 3.8.1-final-0 -----------
-    Name                             Stmts   Miss  Cover
-    ----------------------------------------------------
-    PyApiManager\Config.py              16      0   100%
-    PyApiManager\ConfigPath.py           9      1    89%
-    PyApiManager\RequestFactory.py      16      1    94%
-    PyApiManager\__init__.py             0      0   100%
-    ----------------------------------------------------
-    TOTAL                               41      2    95%
+    Name                                            Stmts   Miss  Cover
+    -------------------------------------------------------------------
+    PyApiManager\Config.py                             16      0   100%
+    PyApiManager\ConfigPath.py                          9      1    89%
+    PyApiManager\RequestFactory.py                     16      1    94%
+    PyApiManager\__init__.py                            0      0   100%
+    PyApiManager_src\ApiConfig\ApiConfig.py            12      0   100%
+    PyApiManager_src\ApiConfig\UniqueDecorator.py      17      3    82%
+    PyApiManager_src\ApiConfig\__init__.py              0      0   100%
+    PyApiManager_src\ApiRequest\ApiRequest.py          49      4    92%
+    PyApiManager_src\ApiRequest\__init__.py             0      0   100%
+    PyApiManager_src\__init__.py                        0      0   100%
+    -------------------------------------------------------------------
+    TOTAL                                             119      9    92%
+
+
+coverage report with pytest-cov
