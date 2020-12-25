@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PyApiManager.iml" filepath="$PROJECT_DIR$/.idea/PyApiManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PyBatch/.idea/PyBatch.iml" filepath="$PROJECT_DIR$/../PyBatch/.idea/PyBatch.iml" />
     </modules>
   </component>
 </project>
