@@ -104,7 +104,7 @@ class ApiRequest:
 
 
     def __str__(self):
-        return "ApiRequest: %r" % (self._get_url())
+        return "ApiRequest: %r / params: %r" % (self._get_url(), self._params)
 
 
     def __copy__(self):

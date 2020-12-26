@@ -13,7 +13,12 @@ https://clemparpa.github.io
 https://test.pypi.org/project/PyApiManager-clemparpa/0.5.1/
 
 
-## Demo
+## Install
+    
+    pip install -i https://test.pypi.org/simple/ PyApiManager-clemparpa==0.5.1
+
+
+## Usage
 
 Create a Config Path Instance which contains configurations for your apis: 
 
@@ -43,11 +48,13 @@ if it's JSON format data, response.json() returns a dict which contains data
 
 
 ## Coverage
+
     ----------- coverage: platform win32, python 3.8.1-final-0 -----------
     Name                                            Stmts   Miss  Cover
     -------------------------------------------------------------------
     PyApiManager\Config.py                             16      0   100%
     PyApiManager\ConfigPath.py                          9      1    89%
+    PyApiManager\Pipelines.py                          55      4    93%
     PyApiManager\RequestFactory.py                     16      1    94%
     PyApiManager\__init__.py                            0      0   100%
     PyApiManager_src\ApiConfig\ApiConfig.py            12      0   100%
@@ -57,7 +64,8 @@ if it's JSON format data, response.json() returns a dict which contains data
     PyApiManager_src\ApiRequest\__init__.py             0      0   100%
     PyApiManager_src\__init__.py                        0      0   100%
     -------------------------------------------------------------------
-    TOTAL                                             119      9    92%
+    TOTAL                                             174     13    93%
+
 
 
 coverage report with pytest-cov

@@ -63,7 +63,7 @@ class RequestFactory:
         ex
 
             request1 = FactoryA(end_url=end_of_url, params={"plan":"Tier_one"})
-            response = request1.json() <-- check 'requests' librairy  documentation
+            response = request1.get_response() obtain a request response
     """
 
 
@@ -80,7 +80,7 @@ class RequestFactory:
     def __call__(self, end_url=None, params=None):
         response = self._api_request.copy()
         response.set_request(end_url=end_url, params=params)
-        return response.get_response()
+        return response
 
 
     def __repr__(self):
