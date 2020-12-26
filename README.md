@@ -22,6 +22,10 @@ https://test.pypi.org/project/PyApiManager-clemparpa/0.5.1/
 
 Create a Config Path Instance which contains configurations for your apis: 
 
+    from PyApiManager.ConfigPatch import ConfigPath
+    from PyApiManager.Config import Config
+
+
     ConfigPath(
         Config(name="api_demo", base_url="https://api_demo_url"),
         Config(name="api_2_demo", base_url="http://api_2_demo_base")
@@ -29,14 +33,16 @@ Create a Config Path Instance which contains configurations for your apis:
     
 Then Create Request Classes for your apis
 
-    ApiDemo = RequestFactory(api_name="api_demo")
-    Api2Demo = RequestFactory(api_name="api_2_demo")
+    from PyApiManager.RequestFactory import RequestFactory 
+
+    ApiDemoFacotory = RequestFactory(api_name="api_demo")
+    Api2DemoFacotory = RequestFactory(api_name="api_2_demo")
     
 Finally instanciate and execute requests
 
-    response = ApiDemo(end_url="clemparpa")
-    response2 = Api2Demo(end_url="Zlatan")
-    response3 = ApiDemo(end_url="Neymar", params={"league":"2021392"})
+    response =  ApiDemoFacotory(end_url="clemparpa")
+    response2 = Api2DemoFacotory(end_url="Zlatan")
+    response3 = ApiDemoFacotory(end_url="Neymar", params={"league":"2021392"})
 
 It return requests.request objects for the following urls
 
@@ -44,7 +50,55 @@ It return requests.request objects for the following urls
     response2 ---> "GET" http://api_2_demo_base/Zlatan
     response3 ---> "GET" https://api_demo_url/Neimar?league=2021392
 
-if it's JSON format data, response.json() returns a dict which contains data
+if it's JSON format data, response.get_response().json() returns a dict which contains data
+
+You can either use a Pipeline to execute many requests in a batch:
+
+import the pipeline classes
+
+
+    from PyApiManager.Pipelines import ApiPipeline
+
+
+then create your pipeline by inheriting ApiPipeline class (check documentation) 
+
+you need to override write method.
+
+here it just print the pipe results
+    
+
+    class DemoPrintPipeline(ApiPipeline):
+    
+        def write(entry_pack):
+            print(entry_pack)
+
+create a instance of the class designed            
+
+here a pipe with the ApiDemoFactory as RequestFactory and 1 second for sleeping time
+
+(check pipelines documentation)
+    
+    pipe = DemoPrintPipeline(ApiDemoFacotory, sleeping_time=1)
+
+loading requests parameters:
+
+    parameters = [
+            ("clemparpa", None),
+            ("Neymar", {"league":"2021392"})
+        ]
+
+    pipe.load_data(parameters)
+        
+run the pipe:
+
+    pipe.run_pipe()
+    
+execute two requests with 1 second sleeping between:
+
+    >>> "GET" https://api_demo_url/clemparpa
+    >>> "GET" https://api_demo_url/Neimar?league=2021392
+
+
 
 
 ## Coverage
@@ -65,7 +119,6 @@ if it's JSON format data, response.json() returns a dict which contains data
     PyApiManager_src\__init__.py                        0      0   100%
     -------------------------------------------------------------------
     TOTAL                                             174     13    93%
-
 
 
 coverage report with pytest-cov
