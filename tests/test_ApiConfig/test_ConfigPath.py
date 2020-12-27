@@ -38,6 +38,7 @@ class TestApiPipeline:
         ("todos/1", None),
         ("todos/1", None),
         ("todos/1", None),
+        ("fake_url_for_test", None)
     ]
 
     real_entry_gen = (item for item in real_entry_list)
@@ -53,7 +54,7 @@ class TestApiPipeline:
 
     def test_true_factory_pipe_init(self):
         real_factory = RequestFactory("test_factory")
-        assert self.PipeCls(real_factory)._RequestFactory == real_factory
+        assert self.PipeCls(real_factory).request_factory == real_factory
 
 
     def test_fake_load_data(self):
@@ -83,12 +84,12 @@ class TestApiPipeline:
         pipe.load_data(self.real_entry_list)
         pipe.run_pipe()
         assert pipe.data_store == [
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
+            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
         ]
-        del pipe
+
 
     def test_transaction_rate(self):
         real_factory = RequestFactory("test_factory")
@@ -96,17 +97,17 @@ class TestApiPipeline:
         pipe.load_data(self.real_entry_list)
         pipe.run_pipe(transaction_rate=2)
         assert pipe.data_store == [
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
+            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
 
             [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
              {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
             [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
              {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
         ]
-        del pipe
+
 
     def test_higher_transaction_rate(self):
         real_factory = RequestFactory("test_factory")
@@ -114,10 +115,10 @@ class TestApiPipeline:
         pipe.load_data(self.real_entry_list)
         pipe.run_pipe(10)
         assert pipe.data_store == [
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
-            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
+            [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
+             {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
 
             [{'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
              {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
@@ -129,6 +130,28 @@ class TestApiPipeline:
              {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1},
              {'completed': False, 'id': 1, 'title': 'delectus aut autem', 'userId': 1}],
         ]
+
+    def test_err_log(self):
+        real_factory = RequestFactory("test_factory")
+        pipe = self.PipeCls(real_factory, 0.3)
+        pipe.load_data(self.real_entry_list)
+        pipe.run_pipe()
+        assert pipe.err_log != []
+
+
+    def test_eq_pipes(self):
+        real_factory = RequestFactory("test_factory")
+        pipe1 = self.PipeCls(real_factory, 0.3)
+        pipe2 = self.PipeCls(real_factory, 1)
+
+        assert pipe1 == pipe2
+        assert hash(pipe1) == hash(pipe2)
+
+    def test_repr(self):
+        real_factory = RequestFactory("test_factory")
+        pipe = self.PipeCls(real_factory, 0.3)
+        assert str(pipe) == "PipeCls(RequestFactory('test_factory'), 0.3)"
+
 
 
 

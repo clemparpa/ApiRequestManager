@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="PyApiManager-clemparpa",
-    version="0.5.1",
+    version="0.7.1",
     author="clemparpa",
     author_email="clem.parpaillon@example.com",
     description="Communicate with Apis is Ez",

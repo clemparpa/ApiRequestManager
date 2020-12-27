@@ -10,20 +10,19 @@ to call many apis easily
 https://clemparpa.github.io
 
 ## PyPi project page
-https://test.pypi.org/project/PyApiManager-clemparpa/0.5.1/
+https://test.pypi.org/project/PyApiManager-clemparpa/0.7.1/
 
 
 ## Install
     
-    pip install -i https://test.pypi.org/simple/ PyApiManager-clemparpa==0.5.1
+    pip install -i https://test.pypi.org/simple/ PyApiManager-clemparpa==0.7.1
 
 
 ## Usage
 
 Create a Config Path Instance which contains configurations for your apis: 
 
-    from PyApiManager.ConfigPatch import ConfigPath
-    from PyApiManager.Config import Config
+    from PyApiManager import Config, ConfigPath
 
 
     ConfigPath(
@@ -33,7 +32,7 @@ Create a Config Path Instance which contains configurations for your apis:
     
 Then Create Request Classes for your apis
 
-    from PyApiManager.RequestFactory import RequestFactory 
+    from PyApiManager import RequestFactory 
 
     ApiDemoFacotory = RequestFactory(api_name="api_demo")
     Api2DemoFacotory = RequestFactory(api_name="api_2_demo")
@@ -57,7 +56,7 @@ You can either use a Pipeline to execute many requests in a batch:
 import the pipeline classes
 
 
-    from PyApiManager.Pipelines import ApiPipeline
+    from PyApiManager import ApiPipeline
 
 
 then create your pipeline by inheriting ApiPipeline class (check documentation) 
@@ -108,9 +107,9 @@ execute two requests with 1 second sleeping between:
     -------------------------------------------------------------------
     PyApiManager\Config.py                             16      0   100%
     PyApiManager\ConfigPath.py                          9      1    89%
-    PyApiManager\Pipelines.py                          55      4    93%
-    PyApiManager\RequestFactory.py                     16      1    94%
-    PyApiManager\__init__.py                            0      0   100%
+    PyApiManager\Pipelines.py                          84     10    88%
+    PyApiManager\RequestFactory.py                     16      0   100%
+    PyApiManager\__init__.py                            5      0   100%
     PyApiManager_src\ApiConfig\ApiConfig.py            12      0   100%
     PyApiManager_src\ApiConfig\UniqueDecorator.py      17      3    82%
     PyApiManager_src\ApiConfig\__init__.py              0      0   100%
@@ -118,7 +117,8 @@ execute two requests with 1 second sleeping between:
     PyApiManager_src\ApiRequest\__init__.py             0      0   100%
     PyApiManager_src\__init__.py                        0      0   100%
     -------------------------------------------------------------------
-    TOTAL                                             174     13    93%
+    TOTAL                                             208     18    91%
+
 
 
 coverage report with pytest-cov

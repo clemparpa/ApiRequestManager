@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4305b334-f374-4494-bbd3-900c78cc7287" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/Pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyApiManager/Pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyApiManager/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_ConfigPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_ConfigPath.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
       <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager_src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Pipelines">
+  <component name="RunManager" selected="Python.test_ConfigPath">
     <configuration name="ConfigPath (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyApiManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -62,7 +66,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ConfigPath" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Pipelines (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyApiManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,7 +78,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager\ConfigPath.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyApiManager/Pipelines.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Pipelines" />
         <item itemvalue="Python.test_ConfigPath" />
+        <item itemvalue="Python.Pipelines (1)" />
+        <item itemvalue="Python.Pipelines" />
         <item itemvalue="Python.setup" />
         <item itemvalue="Python.ConfigPath (1)" />
-        <item itemvalue="Python.ConfigPath" />
       </list>
     </recent_temporary>
   </component>
@@ -177,22 +181,26 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608946529470" />
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609010027912">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609031745094">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609010027912" />
-    <state width="1899" height="197" key="GridCell.Tab.0.center" timestamp="1609010027912">
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609031745094" />
+    <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609090538200">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609010027912" />
-    <state width="1899" height="197" key="GridCell.Tab.0.left" timestamp="1609010027912">
+    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
+    <state width="1899" height="197" key="GridCell.Tab.0.center" timestamp="1609090538200">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609010027912" />
-    <state width="1899" height="197" key="GridCell.Tab.0.right" timestamp="1609010027912">
+    <state width="1899" height="197" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
+    <state width="1899" height="197" key="GridCell.Tab.0.left" timestamp="1609090538200">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609010027912" />
+    <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
+    <state width="1899" height="197" key="GridCell.Tab.0.right" timestamp="1609090538200">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="197" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608986283012">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

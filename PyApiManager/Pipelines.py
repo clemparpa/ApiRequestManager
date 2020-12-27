@@ -1,3 +1,5 @@
+from datetime import datetime
+import requests
 import time
 from abc import ABC, abstractmethod
 from PyApiManager.RequestFactory import RequestFactory
@@ -76,10 +78,11 @@ class GenericPipeline(ABC):
                 Integer.
                 Provides the number of data elements that need to be write together
                 with the write method
+                Put it to 1(one) to write after each element process
                 if transaction_rate number is higher than data length, write method
                 is executed once for all data elements at the end
                 if transaction_rate number is None(Not specified) write method is called
-                for each data element
+                once a the end of the pipe
 
         """
         if transaction_rate is not None:
@@ -88,8 +91,9 @@ class GenericPipeline(ABC):
             for entry in self._data:
                 data_fragment = self.read(entry)
                 data_fragment = self.process(data_fragment)
-                data_storage.append(data_fragment)
-                count += 1
+                if data_fragment is not None:
+                    data_storage.append(data_fragment)
+                    count += 1
 
                 if count == transaction_rate:
                     self.write(data_storage)
@@ -99,10 +103,14 @@ class GenericPipeline(ABC):
             if data_storage:
                 self.write(data_storage)
         else:
+            data_storage = []
             for entry in self._data:
                 data_fragment = self.read(entry)
                 data_fragment = self.process(data_fragment)
-                self.write([data_fragment])
+                if data_fragment is not None:
+                    data_storage.append(data_fragment)
+            if data_storage:
+                self.write(data_storage)
 
 
 
@@ -128,13 +136,19 @@ class ApiPipeline(GenericPipeline, ABC):
             want that pipe sleep after each request to 'sleeping_time' argument
     """
 
-    _RequestFactory = None
+    request_factory = None
+    _err_log = []
+
+
+    @property
+    def err_log(self):
+        return self._err_log
 
 
     def __init__(self, request_factory: RequestFactory, sleeping_time: float = None):
         if not isinstance(request_factory, RequestFactory):
             raise ValueError("request_factory argument needs to be an instance of RequestFactory")
-        self._RequestFactory = request_factory
+        self.request_factory = request_factory
         self._sleeping_time = sleeping_time
 
 
@@ -161,12 +175,19 @@ class ApiPipeline(GenericPipeline, ABC):
 
 
         """
-        read = self._RequestFactory(*entry)
+        read = self.request_factory(*entry)
         return read
 
 
     def process(self, entry):
         """execute the requests created by read() method and sleep if needed
+
+        if an error Occurs during request execution an log object is added to
+        err_log argument
+        Log objects are 4-tuple like
+
+                ("entry", "status_code_if_there_is", "datetime", "typeError")
+        Errors catched are requests.exceptions.ConnectionError, Timeout, and HttpError
 
         Arguments:
 
@@ -174,12 +195,40 @@ class ApiPipeline(GenericPipeline, ABC):
 
                 a request element that is passed through this function in run_pipe method
                 check read() method documentation
-
         """
-        result = entry.get_response()
-        if self._sleeping_time is not None:
+        try:
+            result = entry.get_response()
+        except requests.exceptions.ConnectionError as e:
+            self.err_log.append((entry, None, datetime.now(), "ConnectionError"), )
+            result = None
+        except requests.exceptions.Timeout as e:
+            self.err_log.append((entry, None, datetime.now(), "TimeOut"), )
+            result = None
+        try:
+            result.raise_for_status()
+        except requests.exceptions.HTTPError as e:
+            self.err_log.append((entry, result.status_code, datetime.now(), "HttpError"),)
+            result = None
+
+        if self._sleeping_time is not None and result is not None:
             time.sleep(self._sleeping_time)
+
         return result
+
+
+    def __eq__(self, other):
+        """Pipe with same request factorys are equals"""
+        return self.request_factory == other.request_factory
+
+
+    def __hash__(self):
+        """Pipe with same request fatorys have same hash"""
+        return hash(self.request_factory)
+
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}(%r, %r)" % (self.request_factory, self._sleeping_time)
+
 
 
     @abstractmethod
@@ -197,6 +246,9 @@ class ApiPipeline(GenericPipeline, ABC):
 
         """
         pass
+
+
+
 
 
 
