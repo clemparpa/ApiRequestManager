@@ -15,7 +15,7 @@ https://test.pypi.org/project/PyApiManager-clemparpa/0.6.1/
 
 ## Install
     
-    pip install -i https://test.pypi.org/simple/ PyApiManager-clemparpa==0.5.1
+    pip install -i https://test.pypi.org/simple/ PyApiManager-clemparpa==0.6.1
 
 
 ## Usage
