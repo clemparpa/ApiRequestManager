@@ -1,6 +1,6 @@
-from PyApiManager_src.ApiConfig.UniqueDecorator import Unique
-from PyApiManager.Config import Config
-from PyApiManager_src.ApiConfig.ApiConfig import ApiConfig
+from src.ApiConfig.UniqueDecorator import Unique
+from src.Config import Config
+from src.ApiConfig.ApiConfig import ApiConfig
 
 
 @Unique

@@ -1,6 +1,6 @@
-from PyApiManager_src.ApiRequest.ApiRequest import ApiRequest
-from PyApiManager_src.ApiConfig.ApiConfig import ApiConfig
-from PyApiManager.Config import Config
+from src.ApiRequest.ApiRequest import ApiRequest
+from src.ApiConfig.ApiConfig import ApiConfig
+from src.Config import Config
 
 
 class RequestFactory:
@@ -85,6 +85,9 @@ class RequestFactory:
 
     def __repr__(self):
         return "RequestFactory(%r)" % self._api_name
+
+
+
 
 
 

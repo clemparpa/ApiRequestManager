@@ -1,4 +1,4 @@
-from PyApiManager_src.ApiConfig.UniqueDecorator import Unique
+from src.ApiConfig.UniqueDecorator import Unique
 from pytest import raises
 
 

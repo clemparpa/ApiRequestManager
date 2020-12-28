@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4305b334-f374-4494-bbd3-900c78cc7287" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ApiRequestManager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/make_pipe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PyApiManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ApiRequestManager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/Pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyApiManager/Pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyApiManager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/ConfigPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigPath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/Pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/RequestFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RequestFactory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiConfig/ApiConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiConfig/ApiConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiConfig/UniqueDecorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiConfig/UniqueDecorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiConfig/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiConfig/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiRequest/ApiRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiRequest/ApiRequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiRequest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiRequest/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyApiManager_src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_ConfigPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_ConfigPath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_UniqueDecorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_UniqueDecorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ApiRequest/test_ApiRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiRequest/test_ApiRequest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +51,17 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestPyApiManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager" />
       <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager_src" />
+      <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager" />
     </key>
   </component>
   <component name="RunManager" selected="Python.test_ConfigPath">
-    <configuration name="ConfigPath (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyApiManager" />
+    <configuration name="Pipelines" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ApiRequestManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -57,28 +72,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyApiManager/ConfigPath.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Pipelines (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyApiManager" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyApiManager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyApiManager/Pipelines.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager_src\Pipelines.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,7 +82,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Pipelines" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyApiManager" />
+      <module name="ApiRequestManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -99,7 +93,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager\Pipelines.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager_src\Pipelines.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="ApiRequestManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="make_pipe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ApiRequestManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyApiManager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager_src\make_pipe.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +166,7 @@
       <method v="2" />
     </configuration>
     <configuration name="test_ConfigPath" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyApiManager" />
+      <module name="ApiRequestManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -150,13 +186,56 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="ApiRequestManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="ApiRequestManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="ApiRequestManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_ConfigPath" />
+        <item itemvalue="Python.make_pipe" />
         <item itemvalue="Python.Pipelines (1)" />
         <item itemvalue="Python.Pipelines" />
         <item itemvalue="Python.setup" />
-        <item itemvalue="Python.ConfigPath (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -181,26 +260,26 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608946529470" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609031745094">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609097748874">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609031745094" />
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609090538200">
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609097748874" />
+    <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609120569403">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
-    <state width="1899" height="197" key="GridCell.Tab.0.center" timestamp="1609090538200">
+    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
+    <state width="1899" height="197" key="GridCell.Tab.0.center" timestamp="1609120569403">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
-    <state width="1899" height="197" key="GridCell.Tab.0.left" timestamp="1609090538200">
+    <state width="1899" height="197" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
+    <state width="1899" height="197" key="GridCell.Tab.0.left" timestamp="1609120569403">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
-    <state width="1899" height="197" key="GridCell.Tab.0.right" timestamp="1609090538200">
+    <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
+    <state width="1899" height="197" key="GridCell.Tab.0.right" timestamp="1609120569403">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609090538200" />
+    <state width="1899" height="197" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608986283012">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

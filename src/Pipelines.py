@@ -2,7 +2,7 @@ from datetime import datetime
 import requests
 import time
 from abc import ABC, abstractmethod
-from PyApiManager.RequestFactory import RequestFactory
+from src.RequestFactory import RequestFactory
 
 
 class GenericPipeline(ABC):
@@ -85,6 +85,11 @@ class GenericPipeline(ABC):
                 once a the end of the pipe
 
         """
+        # vide le cache d'erreur
+        if hasattr(self, '_err_log'):
+            self._err_log = []
+
+
         if transaction_rate is not None:
             count = 0
             data_storage = []
@@ -111,6 +116,7 @@ class GenericPipeline(ABC):
                     data_storage.append(data_fragment)
             if data_storage:
                 self.write(data_storage)
+
 
 
 
@@ -142,7 +148,18 @@ class ApiPipeline(GenericPipeline, ABC):
 
     @property
     def err_log(self):
+        """ List of errors occured during Pipe
+
+            Log objects are 4-tuple like
+                ("entry", "status_code_if_there_is", "datetime", "typeError")
+            Errors catched are requests.exceptions.ConnectionError, Timeout, and HttpError
+        """
         return self._err_log
+
+
+    def err_params_log(self):
+        """return error logs parameters to rerun the pipe with failed requests"""
+        return [err[0].get_request_params() for err in self._err_log]
 
 
     def __init__(self, request_factory: RequestFactory, sleeping_time: float = None):
@@ -199,15 +216,15 @@ class ApiPipeline(GenericPipeline, ABC):
         try:
             result = entry.get_response()
         except requests.exceptions.ConnectionError as e:
-            self.err_log.append((entry, None, datetime.now(), "ConnectionError"), )
+            self._err_log.append((entry, None, datetime.now(), "ConnectionError"), )
             result = None
         except requests.exceptions.Timeout as e:
-            self.err_log.append((entry, None, datetime.now(), "TimeOut"), )
+            self._err_log.append((entry, None, datetime.now(), "TimeOut"), )
             result = None
         try:
             result.raise_for_status()
         except requests.exceptions.HTTPError as e:
-            self.err_log.append((entry, result.status_code, datetime.now(), "HttpError"),)
+            self._err_log.append((entry, result.status_code, datetime.now(), "HttpError"),)
             result = None
 
         if self._sleeping_time is not None and result is not None:

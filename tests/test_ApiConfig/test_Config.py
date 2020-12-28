@@ -1,4 +1,4 @@
-from PyApiManager.Config import Config
+from src.Config import Config
 
 
 class TestConfig:

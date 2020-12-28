@@ -1,5 +1,5 @@
-from PyApiManager_src.ApiRequest.ApiRequest import ApiRequest
-from PyApiManager.Config import Config
+from src.ApiRequest.ApiRequest import ApiRequest
+from src.Config import Config
 
 
 

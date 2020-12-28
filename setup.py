@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="PyApiManager-clemparpa",
-    version="0.7.1",
+    name="ApiRequestManager",
+    version="1.0.1",
     author="clemparpa",
     author_email="clem.parpaillon@example.com",
     description="Communicate with Apis is Ez",
@@ -13,10 +13,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/clemparpa/PyApiManager",
     packages=[
-        "PyApiManager",
-        "PyApiManager_src",
-        "PyApiManager_src/ApiConfig",
-        "PyApiManager_src/ApiRequest"
+        "ApiRequestManager",
+        "src",
+        "src/ApiConfig",
+        "src/ApiRequest"
     ],
     install_requires=[
         "requests"

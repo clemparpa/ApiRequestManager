@@ -1,5 +1,5 @@
 import copy
-from PyApiManager.Config import Config
+from src.Config import Config
 from urllib.parse import urljoin
 import requests
 
@@ -105,6 +105,11 @@ class ApiRequest:
 
     def __str__(self):
         return "ApiRequest: %r / params: %r" % (self._get_url(), self._params)
+
+
+    def get_request_params(self):
+        """return request parameters and end_url reprensented what was passed to the set_request() method"""
+        return self._end_url, self._params
 
 
     def __copy__(self):

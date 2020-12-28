@@ -1,8 +1,8 @@
-# PyApiManager
+# ApiRequestManager
  Communicate with Apis with flow
 
 
-PyApiManager module provides ConfigPath object and RequestFactory to be able
+ApiRequestManager module provides ConfigPath object and RequestFactory to be able
 to call many apis easily
 
 
@@ -10,19 +10,19 @@ to call many apis easily
 https://clemparpa.github.io
 
 ## PyPi project page
-https://test.pypi.org/project/PyApiManager-clemparpa/0.7.1/
+https://test.pypi.org/project/ApiRequestManager-clemparpa/0.7.1/
 
 
 ## Install
     
-    pip install -i https://test.pypi.org/simple/ PyApiManager-clemparpa==0.7.1
+    pip install -i https://test.pypi.org/simple/ ApiRequestManager-clemparpa==0.7.1
 
 
 ## Usage
 
 Create a Config Path Instance which contains configurations for your apis: 
 
-    from PyApiManager import Config, ConfigPath
+    from ApiRequestManager import Config, ConfigPath
 
 
     ConfigPath(
@@ -32,7 +32,7 @@ Create a Config Path Instance which contains configurations for your apis:
     
 Then Create Request Classes for your apis
 
-    from PyApiManager import RequestFactory 
+    from ApiRequestManager import RequestFactory 
 
     ApiDemoFacotory = RequestFactory(api_name="api_demo")
     Api2DemoFacotory = RequestFactory(api_name="api_2_demo")
@@ -56,7 +56,7 @@ You can either use a Pipeline to execute many requests in a batch:
 import the pipeline classes
 
 
-    from PyApiManager import ApiPipeline
+    from ApiRequestManager import ApiPipeline
 
 
 then create your pipeline by inheriting ApiPipeline class (check documentation) 
@@ -98,26 +98,43 @@ execute two requests with 1 second sleeping between:
     >>> "GET" https://api_demo_url/Neimar?league=2021392
 
 
+You can also use these 2 next functions for the same result
+
+    from ApiRequestManager import make_api_pipe, run_api_pipe
+    
+    demo_pipe = make_api_pipe(api_name="api_demo",
+                              writer=lambda entry_pack: print(entry_pack),
+                              sleeping_time=1)
+    
+    log = run_api_pipe(pipe_instance=demo_pipe,
+                       request_arguments=parameters)
+                       
+the log variable store a containing requests which failed
+   
+
+
+
 
 
 ## Coverage
 
-    ----------- coverage: platform win32, python 3.8.1-final-0 -----------
-    Name                                            Stmts   Miss  Cover
-    -------------------------------------------------------------------
-    PyApiManager\Config.py                             16      0   100%
-    PyApiManager\ConfigPath.py                          9      1    89%
-    PyApiManager\Pipelines.py                          84     10    88%
-    PyApiManager\RequestFactory.py                     16      0   100%
-    PyApiManager\__init__.py                            5      0   100%
-    PyApiManager_src\ApiConfig\ApiConfig.py            12      0   100%
-    PyApiManager_src\ApiConfig\UniqueDecorator.py      17      3    82%
-    PyApiManager_src\ApiConfig\__init__.py              0      0   100%
-    PyApiManager_src\ApiRequest\ApiRequest.py          49      4    92%
-    PyApiManager_src\ApiRequest\__init__.py             0      0   100%
-    PyApiManager_src\__init__.py                        0      0   100%
-    -------------------------------------------------------------------
-    TOTAL                                             208     18    91%
+     -- coverage: platform win32, python 3.8.1-final-0 --
+    Name                               Stmts   Miss  Cover
+    ------------------------------------------------------
+    ApiRequestManager\__init__.py               6      6     0%
+    src\ApiConfig\ApiConfig.py            12      0   100%
+    src\ApiConfig\UniqueDecorator.py      17      3    82%
+    src\ApiConfig\__init__.py              0      0   100%
+    src\ApiRequest\ApiRequest.py          51      4    92%
+    src\ApiRequest\__init__.py             0      0   100%
+    src\Config.py                         16      0   100%
+    src\ConfigPath.py                      9      1    89%
+    src\Pipelines.py                      88     10    89%
+    src\RequestFactory.py                 16      0   100%
+    src\__init__.py                        0      0   100%
+    src\make_pipe.py                      25      0   100%
+    ------------------------------------------------------
+    TOTAL                                240     24    90%
 
 
 
