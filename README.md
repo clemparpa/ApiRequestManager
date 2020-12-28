@@ -9,13 +9,18 @@ to call many apis easily
 ## documentation 
 https://clemparpa.github.io
 
+
+## Github source page
+https://github.com/clemparpa/ApiRequestManager
+
+
 ## PyPi project page
-https://test.pypi.org/project/ApiRequestManager-clemparpa/0.7.1/
+https://pypi.org/project/ApiRequestManager/1.0.2/
 
 
 ## Install
     
-    pip install -i https://test.pypi.org/simple/ ApiRequestManager-clemparpa==0.7.1
+    pip install ApiRequestManager==1.0.2
 
 
 ## Usage

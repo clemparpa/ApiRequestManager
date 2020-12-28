@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="ApiRequestManager",
-    version="1.0.1",
+    version="1.0.2",
     author="clemparpa",
     author_email="clem.parpaillon@example.com",
-    description="Communicate with Apis is Ez",
+    description="Communicate with Apis is easy",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/clemparpa/PyApiManager",

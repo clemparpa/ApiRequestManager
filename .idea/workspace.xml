@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4305b334-f374-4494-bbd3-900c78cc7287" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ApiRequestManager/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/make_pipe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PyApiManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ApiRequestManager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/instance_method_decorator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/ConfigPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigPath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/Pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/RequestFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RequestFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiConfig/ApiConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiConfig/ApiConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiConfig/UniqueDecorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiConfig/UniqueDecorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiConfig/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiConfig/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiRequest/ApiRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiRequest/ApiRequest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager_src/ApiRequest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiRequest/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyApiManager_src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_ConfigPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_ConfigPath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_ApiConfig/test_UniqueDecorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiConfig/test_UniqueDecorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_ApiRequest/test_ApiRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ApiRequest/test_ApiRequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/make_pipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/make_pipe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,10 +245,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608946529470" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609097748874">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609122978030">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609097748874" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609122978030" />
     <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609120569403">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

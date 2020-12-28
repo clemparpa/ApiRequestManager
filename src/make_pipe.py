@@ -2,15 +2,7 @@ from typing import List
 from src.Pipelines import ApiPipeline
 from src.RequestFactory import RequestFactory
 from collections.abc import Callable
-from functools import wraps
-
-
-def instance_method_wrapper(func):
-    """Decorator which return the same func with a 'self' argument in declaration"""
-    @wraps(func)
-    def decorated_(self, *args, **kwargs):
-        return func(*args, **kwargs)
-    return decorated_
+from src.Utils.instance_method_decorator import instance_method_wrapper
 
 
 def make_api_pipe(api_name: str, writer: Callable, sleeping_time: float = None):
