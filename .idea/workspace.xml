@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4305b334-f374-4494-bbd3-900c78cc7287" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/instance_method_decorator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/instance_method_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/instance_method_decorator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/make_pipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/make_pipe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,15 +36,16 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestPyApiManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\src" />
       <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager_src" />
       <recent name="C:\Users\talal\Desktop\projets_python\PyApiManager\PyApiManager" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_ConfigPath">
+  <component name="RunManager" selected="Python.make_pipe (1)">
     <configuration name="Pipelines" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApiRequestManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,6 +101,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="make_pipe (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ApiRequestManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/make_pipe.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,9 +238,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.make_pipe (1)" />
         <item itemvalue="Python.test_ConfigPath" />
         <item itemvalue="Python.make_pipe" />
-        <item itemvalue="Python.Pipelines (1)" />
         <item itemvalue="Python.Pipelines" />
         <item itemvalue="Python.setup" />
       </list>
@@ -245,26 +267,26 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608946529470" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609122978030">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1609125209000">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609122978030" />
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609120569403">
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609125209000" />
+    <state width="1899" height="197" key="GridCell.Tab.0.bottom" timestamp="1609125622749">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
-    <state width="1899" height="197" key="GridCell.Tab.0.center" timestamp="1609120569403">
+    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609125622749" />
+    <state width="1899" height="197" key="GridCell.Tab.0.center" timestamp="1609125622749">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
-    <state width="1899" height="197" key="GridCell.Tab.0.left" timestamp="1609120569403">
+    <state width="1899" height="197" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609125622749" />
+    <state width="1899" height="197" key="GridCell.Tab.0.left" timestamp="1609125622748">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
-    <state width="1899" height="197" key="GridCell.Tab.0.right" timestamp="1609120569403">
+    <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609125622748" />
+    <state width="1899" height="197" key="GridCell.Tab.0.right" timestamp="1609125622749">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="197" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609120569403" />
+    <state width="1899" height="197" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609125622749" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608986283012">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

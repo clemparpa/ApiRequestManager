@@ -15,12 +15,12 @@ https://github.com/clemparpa/ApiRequestManager
 
 
 ## PyPi project page
-https://pypi.org/project/ApiRequestManager/1.0.2/
+https://pypi.org/project/ApiRequestManager/1.0.4/
 
 
 ## Install
     
-    pip install ApiRequestManager==1.0.2
+    pip install ApiRequestManager==1.0.4
 
 
 ## Usage

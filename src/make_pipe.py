@@ -1,8 +1,9 @@
 from typing import List
+
 from src.Pipelines import ApiPipeline
 from src.RequestFactory import RequestFactory
 from collections.abc import Callable
-from src.Utils.instance_method_decorator import instance_method_wrapper
+from src.instance_method_decorator import instance_method_wrapper
 
 
 def make_api_pipe(api_name: str, writer: Callable, sleeping_time: float = None):
@@ -98,6 +99,19 @@ def run_api_pipe(pipe_instance, request_arguments: List[tuple], retry_fails: boo
         pipe_instance.load_data(log)
         pipe_instance.run_pipe(transaction_rate=transaction_rate)
     return pipe_instance.err_log
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

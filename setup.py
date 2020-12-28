@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="ApiRequestManager",
-    version="1.0.2",
+    version="1.0.4",
     author="clemparpa",
     author_email="clem.parpaillon@example.com",
     description="Communicate with Apis is easy",
