@@ -154,7 +154,7 @@ class ApiPipeline(GenericPipeline, ABC):
                 ("entry", "status_code_if_there_is", "datetime", "typeError")
             Errors catched are requests.exceptions.ConnectionError, Timeout, and HttpError
         """
-        return self._err_log
+        return [(str(err[0]), err[1], err[2], err[3]) for err in self._err_log]
 
 
     def err_params_log(self):
@@ -213,6 +213,7 @@ class ApiPipeline(GenericPipeline, ABC):
                 a request element that is passed through this function in run_pipe method
                 check read() method documentation
         """
+        start_time = time.time()
         try:
             result = entry.get_response()
         except requests.exceptions.ConnectionError as e:
@@ -228,9 +229,13 @@ class ApiPipeline(GenericPipeline, ABC):
             result = None
 
         if self._sleeping_time is not None and result is not None:
-            time.sleep(self._sleeping_time)
+            run_time = time.time() - start_time
+            if run_time < self._sleeping_time:
+                time.sleep(self._sleeping_time - run_time)
+
 
         return result
+
 
 
     def __eq__(self, other):
