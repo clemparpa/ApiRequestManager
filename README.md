@@ -76,33 +76,40 @@ you need to override write method.
 
 here it just print the pipe results
     
-
+ ```python
     class DemoPrintPipeline(ApiPipeline):
     
         def write(entry_pack):
             print(entry_pack)
+ ```
 
 create a instance of the class designed            
 
 here a pipe with the ApiDemoFactory as RequestFactory and 1 second for sleeping time
 
 (check pipelines documentation)
-    
+
+ ```python
     pipe = DemoPrintPipeline(ApiDemoFacotory, sleeping_time=1)
-
+ ```
+ 
 loading requests parameters:
-
+ 
+ ```python
     parameters = [
             ("clemparpa", None),
             ("Neymar", {"league":"2021392"})
         ]
 
     pipe.load_data(parameters)
-        
+ ```
+ 
 run the pipe:
 
+ ```python
     pipe.run_pipe()
-    
+ ```
+ 
 execute two requests with 1 second sleeping between:
 
     >>> "GET" https://api_demo_url/clemparpa
@@ -110,7 +117,8 @@ execute two requests with 1 second sleeping between:
 
 
 You can also use these 2 next functions for the same result
-
+ 
+ ```python
     from ApiRequestManager import make_api_pipe, run_api_pipe
     
     demo_pipe = make_api_pipe(api_name="api_demo",
@@ -119,12 +127,10 @@ You can also use these 2 next functions for the same result
     
     log = run_api_pipe(pipe_instance=demo_pipe,
                        request_arguments=parameters)
-                       
+ ```                       
+
 the log variable store a containing requests which failed
    
-
-
-
 
 
 ## Coverage
