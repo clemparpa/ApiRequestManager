@@ -27,13 +27,16 @@ https://pypi.org/project/ApiRequestManager/1.0.4/
 
 Create a Config Path Instance which contains configurations for your apis: 
 
-    from ApiRequestManager import Config, ConfigPath
+- python
+ ```
+     from ApiRequestManager import Config, ConfigPath
 
 
-    ConfigPath(
-        Config(name="api_demo", base_url="https://api_demo_url"),
-        Config(name="api_2_demo", base_url="http://api_2_demo_base")
-    )
+     ConfigPath(
+         Config(name="api_demo", base_url="https://api_demo_url"),
+         Config(name="api_2_demo", base_url="http://api_2_demo_base")
+     )
+  ```
     
 Then Create Request Classes for your apis
 
