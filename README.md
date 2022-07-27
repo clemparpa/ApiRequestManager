@@ -27,8 +27,7 @@ https://pypi.org/project/ApiRequestManager/1.0.4/
 
 Create a Config Path Instance which contains configurations for your apis: 
 
-- python
- ```
+ ```python
      from ApiRequestManager import Config, ConfigPath
 
 
@@ -36,20 +35,24 @@ Create a Config Path Instance which contains configurations for your apis:
          Config(name="api_demo", base_url="https://api_demo_url"),
          Config(name="api_2_demo", base_url="http://api_2_demo_base")
      )
-  ```
+ ```
     
 Then Create Request Classes for your apis
 
+ ```python
     from ApiRequestManager import RequestFactory 
 
     ApiDemoFacotory = RequestFactory(api_name="api_demo")
     Api2DemoFacotory = RequestFactory(api_name="api_2_demo")
+ ```
     
 Finally instanciate and execute requests
 
+ ```python
     response =  ApiDemoFacotory(end_url="clemparpa")
     response2 = Api2DemoFacotory(end_url="Zlatan")
     response3 = ApiDemoFacotory(end_url="Neymar", params={"league":"2021392"})
+ ```
 
 It return requests.request objects for the following urls
 
@@ -63,9 +66,9 @@ You can either use a Pipeline to execute many requests in a batch:
 
 import the pipeline classes
 
-
+ ```python
     from ApiRequestManager import ApiPipeline
-
+ ```
 
 then create your pipeline by inheriting ApiPipeline class (check documentation) 
 
